@@ -1,0 +1,14 @@
+<!--Top section-->
+<section class="catalog">
+  <app-catalog-item *ngFor="let item of topSectionItems" [item]="item"></app-catalog-item>
+</section>
+
+<!--Review section-->
+<section class="catalog catalog_review">
+  <app-catalog-item *ngFor="let item of reviewItems" [item]="item"></app-catalog-item>
+</section>
+
+<!--Bottom section-->
+<section class="catalog">
+  <app-catalog-item *ngFor="let item of bottomSectionItems" [item]="item"></app-catalog-item>
+</section>
