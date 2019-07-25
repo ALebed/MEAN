@@ -1,0 +1,8 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+
+  &_review {
+    background: lavender;
+  }
+}
