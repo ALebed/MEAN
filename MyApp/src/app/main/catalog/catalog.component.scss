@@ -6,3 +6,10 @@
     background: lavender;
   }
 }
+
+.catalog-item {
+
+  &_wide {
+    width: 100%;
+  }
+}

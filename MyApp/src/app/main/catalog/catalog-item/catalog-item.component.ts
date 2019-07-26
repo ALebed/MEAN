@@ -9,6 +9,7 @@ import { CatalogItem } from '../catalog-item.model';
 })
 export class CatalogItemComponent implements OnInit {
   @Input() item: CatalogItem;
+  @Input() index: number;
 
   constructor() { }
 

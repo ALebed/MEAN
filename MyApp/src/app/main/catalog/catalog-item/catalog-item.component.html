@@ -1,6 +1,28 @@
-<div>Id: {{item.id}}</div>
-<div>imgUrl: {{item.imgUrl}}</div>
-<div>title: {{item.title}}</div>
-<div>date: {{item.date}}</div>
-<div>views: {{item.views}}</div>
-<div>category: {{item.category}}</div>
+<div [ngSwitch] = "item.layoutType">
+  <div *ngSwitchCase="'wide-type1'">
+    <h6>This is the wide type 1 element</h6>
+    <div>Id: {{item.id}}</div>
+    <div>imgUrl: {{item.imgUrl}}</div>
+    <div>title: {{item.title}}</div>
+    <div>date: {{item.date}}</div>
+    <div>views: {{item.views}}</div>
+    <div>category: {{item.category}}</div>
+  </div>
+  <div *ngSwitchCase="'wide-type2'">
+    <h6>This is the wide type 2 element</h6>
+    <div>Id: {{item.id}}</div>
+    <div>imgUrl: {{item.imgUrl}}</div>
+    <div>title: {{item.title}}</div>
+    <div>date: {{item.date}}</div>
+    <div>views: {{item.views}}</div>
+    <div>category: {{item.category}}</div>
+  </div>
+  <div *ngSwitchDefault>
+    <div>Id: {{item.id}}</div>
+    <div>imgUrl: {{item.imgUrl}}</div>
+    <div>title: {{item.title}}</div>
+    <div>date: {{item.date}}</div>
+    <div>views: {{item.views}}</div>
+    <div>category: {{item.category}}</div>
+  </div>
+</div>
