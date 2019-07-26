@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dropdown-nav.component.scss']
 })
 export class DropdownNavComponent implements OnInit {
+  isActive: boolean;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+    this.isActive = false;
+  }
+  onClick(): void {
+    this.isActive = !this.isActive;
+  }
 }

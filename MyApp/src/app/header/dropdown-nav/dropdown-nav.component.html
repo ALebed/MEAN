@@ -1,4 +1,15 @@
 <div class="dropdown-nav">
-  <button class="dropdown-nav__button">Dropdown Nav Btn</button>
-  <div class="dropdown-nav__content">Dropdown Navigation</div>
+  <button (click)="onClick()" class="dropdown-nav__button">
+    {{ isActive ? 'Hide Nav' : 'Show Nav' }}
+  </button>
+  <div
+    class="dropdown-nav__content"
+    [ngClass] = "{ 'active' : isActive }"
+  >
+    <ul class="dropdown-nav__list">
+      <li class="dropdown-nav__item">DD Nav 1</li>
+      <li class="dropdown-nav__item">DD Nav 2</li>
+      <li class="dropdown-nav__item">DD Nav 3</li>
+    </ul>
+  </div>
 </div>

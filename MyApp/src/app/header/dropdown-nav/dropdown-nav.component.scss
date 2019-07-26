@@ -7,5 +7,41 @@
 
   &__content {
     display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 1px);
+    justify-content: center;
+    height: 100px;
+    background: #FFFFFF;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+
+    &:after {
+      content: "|";
+      display: inline-block;
+      padding: 0 10px;
+      color: coral;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
   }
 }
