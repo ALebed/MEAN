@@ -5,8 +5,10 @@ export class CatalogItem {
     public imgUrl: string,
     public date: string,
     public views: number,
-    public title: string
+    public title: string,
+    public layoutType?: string
   ) {
     this.id = id || null;
+    this.layoutType = layoutType || null;
   }
 }

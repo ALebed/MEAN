@@ -1,6 +1,12 @@
 <!--Top section-->
 <section class="catalog">
-  <app-catalog-item *ngFor="let item of topSectionItems" [item]="item"></app-catalog-item>
+  <app-catalog-item
+    *ngFor="let item of topSectionItems;"
+    [item]="item"
+    [ngClass]="{
+      'catalog-item_wide': item.layoutType === 'wide-type1' || item.layoutType === 'wide-type2'
+    }"
+  ></app-catalog-item>
 </section>
 
 <!--Review section-->
@@ -10,5 +16,11 @@
 
 <!--Bottom section-->
 <section class="catalog">
-  <app-catalog-item *ngFor="let item of bottomSectionItems" [item]="item"></app-catalog-item>
+  <app-catalog-item
+    *ngFor="let item of bottomSectionItems;"
+    [item]="item"
+    [ngClass]="{
+      'catalog-item_wide': item.layoutType === 'wide-type1' || item.layoutType === 'wide-type2'
+    }"
+  ></app-catalog-item>
 </section>
